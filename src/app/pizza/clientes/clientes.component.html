@@ -1,0 +1,20 @@
+<h2>Clientes</h2>
+<table class="table">
+    <thead>
+      <tr>
+       
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pedidos of total_pedidos let i = index" >
+        
+        <td>{{ i + 1 }}</td>
+        <td>{{pedidos.cliente}}</td>
+        <td>{{pedidos.total}}</td>
+      </tr>
+      
+    </tbody>
+  </table>

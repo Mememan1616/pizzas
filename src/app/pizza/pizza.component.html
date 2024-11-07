@@ -1,0 +1,163 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <form [formGroup]="pizzaservice.formPizzas" (ngSubmit)="pizzaservice.tomarPedido()">
+        <div class="row">
+          <div class="col-4">
+            <div>
+              <label for="Nombre" class="form-label"
+                >Nombre del Cliente</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                formControlName="nombre"
+                
+              />
+            </div>
+            <div>
+                <h4 class="text-start">Tamaño de pizza</h4>
+            <div class="form-check text-start">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="size"  
+                id="btn1"
+                value="40"
+                formControlName="size"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+               $40 Chica
+              </label>
+            </div>
+            <div class="form-check text-start">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="size"  
+                id="btn2"
+                value="80"
+                formControlName="size"
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+               $80 Mediana
+              </label>
+            </div>
+            <div class="form-check text-start">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="size"  
+                id="btn3"
+                value="120"
+                formControlName="size"
+              />
+              <label class="form-check-label" for="flexRadioDefault3">
+              $120  Grande
+              </label>
+            </div>
+        </div>
+          </div>
+
+
+
+          <div class="col-4 mb-4">
+            <div>
+              <label for="exampleInputEmail1" class="form-label"
+                >Direccion</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                formControlName="direccion"
+              />
+            </div>
+
+
+            <div>
+                <h4 class="text-start">Ingredientes</h4>
+                <div class="form-check text-start">
+                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1"
+                        formControlName="num_ing"
+                    >
+                    <label class="form-check-label" for="defaultCheck1">
+                      $10 Jamon
+                    </label>
+                  </div>
+
+                  <div class="form-check text-start">
+                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1"
+                        formControlName="num_ing2"
+                    >
+                    <label class="form-check-label" for="defaultCheck1">
+                      $10 Peperoni
+                    </label>
+                  </div>
+                  <div class="form-check text-start">
+                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1"
+                        formControlName="num_ing3"
+                    >
+                    <label class="form-check-label" for="defaultCheck1">
+                      $10 Champiñon
+                    </label>
+                  </div>
+            </div>
+
+            
+          </div>
+
+          
+          <div class="col-4">
+            <div>
+              <label for="exampleInputEmail1" class="form-label"
+                >Telefono</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                formControlName="telefono"
+                
+              />
+            </div>
+
+            <div>
+              <label for="exampleInputEmail1" class="form-label"
+                >Numero de pizzas</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                formControlName="numero"
+                
+              />
+            </div>
+            <div>
+              <p></p>
+            </div>
+            <div class="d-grid">
+                <button class="btn btn-primary" type="submit">Button</button>
+            </div>
+          </div>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+        <app-tabla></app-tabla>
+    </div>
+    <div class="col">
+        <app-clientes></app-clientes>
+    </div>
+  </div>
+</div>
